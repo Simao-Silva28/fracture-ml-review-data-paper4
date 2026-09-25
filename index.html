@@ -1,0 +1,115 @@
+<meta charset="utf-8" />
+<title>Fracture Well-Log Dataset</title>
+<link rel="stylesheet" href="assets/style.css" />
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="eyebrow">Data Availability &middot; Supporting Dataset</div>
+    <h1>Reading Natural Fractures from Conventional Well Logs</h1>
+    <p class="subtitle">Supporting dataset for the critical literature review <em>"Reading Natural Fractures from Conventional Well Logs: A Critical Review of Machine-Learning Validation and Generalization."</em>
+    This page documents every stage of the review's literature funnel — from the 96 candidate papers first identified, through full-text screening, to the 42-paper corpus used for the validation-hierarchy analysis — so a reader can audit any inclusion, exclusion, or classification decision directly.</p>
+    <div id="stat-strip" class="stat-strip"></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="wrap">
+    <button data-target="tab-overview" class="active">Overview</button>
+    <button data-target="tab-stage1">Stage 1 &middot; Screening (96)</button>
+    <button data-target="tab-stage2">Stage 2 &middot; Full-text extraction (53)</button>
+    <button data-target="tab-stage3">Stage 3 &middot; Final corpus (43)</button>
+    <button data-target="tab-figures">Figures</button>
+    <button data-target="tab-about">About &amp; how to cite</button>
+  </div>
+</nav>
+
+<main>
+
+  <section id="tab-overview" class="panel active">
+    <div class="wrap">
+      <h2>Literature funnel</h2>
+      <p class="lead">Every number below traces back to a row in one of the tables on this page. Nothing here is summarized from memory — each stage is the literal output of the screening or extraction step described.</p>
+      <div id="stat-grid" class="stat-grid"></div>
+      <div id="funnel" class="funnel"></div>
+      <div class="note-box">
+        <strong>Reading the funnel.</strong> "Screening" is a title/abstract-level pass; "full-text extraction" applies this review's 26-field extraction framework (bibliographic, geological, target definition, predictor logs, feature engineering, ML algorithm, validation strategy, performance, leakage notes) to every paper whose full text could be obtained. The "final corpus" is what the manuscript calls the 42 (or 43, including one paper cited only descriptively) reviewed studies. Four of the 42 are excluded from the Level 1&ndash;6 validation-hierarchy tally in Sections 6&ndash;7 because they are not genuine field-validation studies (two rely on synthetic labels, one is a companion paper that inherits its validation from another, one could not be classified) — they are still discussed qualitatively elsewhere in the review.
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-stage1" class="panel">
+    <div class="wrap">
+      <h2>Stage 1 — Title/abstract screening (96 candidate papers)</h2>
+      <p class="lead">Every paper returned by the literature search (Scopus, full bibliographic export reconciled 23 September 2026) and screened for topical fit against the review's inclusion/exclusion criteria, with the documented rationale for each decision. Click a card to expand full details — DOI, authors, journal, abstract, and author keywords.</p>
+      <p class="lead"><strong>Search query:</strong> <code>TITLE-ABS-KEY(("natural fracture*" OR "fracture density" OR "fracture intensity" OR "fracture porosity") AND ("well log*" OR "wireline log*" OR "conventional log*") AND ("machine learning" OR "neural network*" OR "deep learning"))</code> — no publication-year filter applied.</p>
+      <div class="workspace">
+        <div class="panel-table"><div id="stage1-list"></div></div>
+        <aside class="panel-side" id="stage1-side"></aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-stage2" class="panel">
+    <div class="wrap">
+      <h2>Stage 2 — Full-text retrieval &amp; extraction (53 papers)</h2>
+      <p class="lead">Papers marked Include or Maybe at screening that were taken forward for full-text retrieval and systematic extraction. 43 had full text obtained and were extracted against the full 26-field framework; 10 had no accessible full text (institutional paywall, purchase declined) and are retained here as abstract-only for traceability, but excluded from the quantitative synthesis in the manuscript. Click a card for the full extraction record.</p>
+      <div class="workspace">
+        <div class="panel-table"><div id="stage2-list"></div></div>
+        <aside class="panel-side" id="stage2-side"></aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-stage3" class="panel">
+    <div class="wrap">
+      <h2>Stage 3 — Final review corpus (43 entries)</h2>
+      <p class="lead">The 42 studies referenced throughout the manuscript, plus one further paper (#87) cited only descriptively after being reclassified as abstract-only. Each entry merges the full extraction record with its resolved Author-Year citation, DOI, and the final validation-level / evidence-strength classification used in Appendix A of the manuscript. Click a card to see every extracted field, including performance metrics, sample sizes, and leakage/independence notes.</p>
+      <div class="workspace">
+        <div class="panel-table"><div id="stage3-list"></div></div>
+        <aside class="panel-side" id="stage3-side"></aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-figures" class="panel">
+    <div class="wrap">
+      <h2>Figures</h2>
+      <p class="lead">Every chart here is computed live from the same records shown in the Stage 1&ndash;3 tables — nothing on this tab is a static image from the manuscript. Pick a breakdown below; for the Stage 3 views, narrow it further with the taxonomy filters to see the bars update.</p>
+      <div class="chip-row" id="chart-view-chips"></div>
+      <div class="chart-layout">
+        <div class="chart-main"><div id="chart-mount"></div></div>
+        <aside class="chart-side" id="chart-filters"></aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-about" class="panel">
+    <div class="wrap">
+      <h2>About this dataset</h2>
+      <p class="lead">This repository accompanies a manuscript in preparation and exists so that every screening, extraction, and classification decision behind the review can be checked directly rather than taken on trust.</p>
+      <h3>What is (and isn't) here</h3>
+      <p>The tables on this page are the review's own structured extraction records — not the original papers themselves. Full texts of the reviewed studies remain the copyright of their respective publishers; this dataset links to each one by DOI rather than reproducing it. What is original to this review, and shared here, is the screening log, the 26-field extraction record for every paper that reached full-text stage, the validation-level and evidence-strength classification, and the citation-resolution map.</p>
+      <h3>Known limitations</h3>
+      <ul>
+        <li>Ten papers marked Include/Maybe at screening have no accessible full text (institutional paywall) and are recorded at abstract/screening-note level only — see the Stage 2 table.</li>
+        <li>Six papers left at "Maybe" during screening were not subsequently pursued to full-text retrieval (see the Overview funnel and Stage 1 table, papers #7, #18, #31, #57, #63, #95).</li>
+        <li>Where a paper's own text did not state a field clearly enough to classify, that field is recorded as "unclear" or "not determinable" rather than inferred.</li>
+        <li><strong>Reconciliation note (23 September 2026):</strong> the full 96-paper Scopus bibliographic export was checked against this repository's records. All 96 papers matched with no additions or removals. Two previously unresolved citations (#2, #53) were resolved to confirmed author names, and one incorrect DOI (#54, Yan et al., 2026) was corrected.</li>
+      </ul>
+      <h3>How to cite</h3>
+      <p>Please cite the manuscript once it is published. If you reuse this dataset directly, cite this page.</p>
+      <h3>License</h3>
+      <p>The extracted data (all JSON files under <code>data/</code>) are released under <strong>CC BY 4.0</strong>. The site code (HTML/CSS/JS) is released under the <strong>MIT License</strong>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Source data for: <em>Reading Natural Fractures from Conventional Well Logs: A Critical Review of Machine-Learning Validation and Generalization.</em></div>
+    <div>Generated from the review's own extraction spreadsheet and screening log.</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>

@@ -1,0 +1,26 @@
+{
+  "stage1_screened_total": 96,
+  "stage1_decision_counts": {
+    "Include": 48,
+    "Exclude": 37,
+    "Maybe": 11
+  },
+  "stage1_included_or_maybe": 59,
+  "stage1_maybe_not_carried_forward": [
+    7,
+    18,
+    31,
+    57,
+    63,
+    95
+  ],
+  "stage2_fulltext_attempted_total": 53,
+  "stage2_fulltext_obtained": 43,
+  "stage2_abstract_only_excluded": 10,
+  "stage3_final_corpus_total": 43,
+  "stage3_core_used_in_paper_taxonomy_and_review": 42,
+  "stage3_core_used_in_validation_tally_38": 38,
+  "stage3_excluded_from_validation_tally_4": 4,
+  "stage3_cited_separately_1": 1,
+  "citations_unresolved": []
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the manuscript it supports (once published) and, if you reuse a specific version of this repository, its archived Zenodo release."
+title: "Data Availability — Reading Natural Fractures from Conventional Well Logs: A Critical Review of Machine-Learning Validation and Generalization"
+type: dataset
+authors:
+  - family-names: "Simao"
+    affiliation: "Universiti Teknologi PETRONAS"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/REPLACE-WITH-USERNAME/REPLACE-WITH-REPO-NAME"
+abstract: >
+  Full literature-screening and extraction dataset supporting a critical
+  literature review of machine-learning approaches to inferring natural
+  fractures from conventional wireline logs. Documents 96 screened
+  candidate papers, 53 papers taken to full-text extraction, and the
+  42-paper (43-entry) final review corpus, each with a 26-field
+  extraction record, validation-level and evidence-strength
+  classification, and resolved Author-Year citation with DOI.
+keywords:
+  - natural fractures
+  - well logs
+  - machine learning
+  - literature review
+  - systematic review
+  - petrophysics
+  - fracture porosity
+  - validation
